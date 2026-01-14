@@ -1,5 +1,8 @@
 # Tomcat y Maven
 
+**Autor:** Jorge Garre Corrales
+
+
 He hecho todos los pasos previos configurando mi máquina Vagrant, ahora voy a hacer la práctica
 
 Lo primero que he hecho ha sido instalar Git ya que no estaba instalado en la máquina y clonar el repositorio de la práctica
