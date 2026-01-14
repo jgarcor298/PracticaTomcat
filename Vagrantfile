@@ -2,11 +2,11 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.define "server-dns" do |server|
+  config.vm.define "tomcat" do |server|
     server.vm.box = "bento/debian-11"
 
     server.vm.provider "parallels" do |prl|
-      prl.name = "server-dns"
+      prl.name = "tomcat"
       prl.memory = 2048
       prl.cpus = 2
     end
