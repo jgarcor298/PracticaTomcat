@@ -24,18 +24,28 @@ sudo apt install -y tomcat9-admin
 # sudo cp /vagrant/config/settings.xml /etc/maven/settings.xml 
 
 
-# mvn archetype:generate -DgroupId=org.zaidinvergeles \
-#                          -DartifactId=tomcat-war \
-#                          -Ddeployment \
-#                          -DarchetypeArtifactId=maven-archetype-webapp \
-#                          -DinteractiveMode=fa
+mvn archetype:generate -DgroupId=org.zaidinvergeles \
+                         -DartifactId=tomcat-war \
+                         -Ddeployment \
+                         -DarchetypeArtifactId=maven-archetype-webapp \
+                         -DinteractiveMode=fa
 
-# sudo cp /vagrant/config/pom.xml /home/vagrant/tomcat-war
+sudo cp /vagrant/config/pom.xml /home/vagrant/tomcat-war
 
-# cd /home/vagrant/tomcat-war
+cd /home/vagrant/tomcat-war
 
-# mvn tomcat7:deploy
+mvn tomcat7:deploy
 
-# sudo apt install -y git
+sudo apt install -y git
 
-# git clone https://github.com/cameronmcnz/rock-paper-scissors.git
+git clone https://github.com/cameronmcnz/rock-paper-scissors.git
+
+cd rock-paper-scissors
+
+git checkout patch-1
+
+cp /vagrant/tarea_config/pom.xml pom.xml 
+
+mvn clean package
+
+mvn tomcat7:deploy
